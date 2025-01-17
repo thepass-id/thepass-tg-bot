@@ -9,7 +9,9 @@ dotenv.config();
 const botToken = process.env.BOT_TOKEN!;
 const thePassTgBotUrl = process.env.THE_PASS_TG_BOT_URL!;
 
-export const telegramBot = new Telegraf(botToken);
+export const telegramBot = new Telegraf(botToken, {
+  telegram: { testEnv: true },
+});
 
 telegramBot.telegram.setMyCommands([
   {
