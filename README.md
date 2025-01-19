@@ -25,3 +25,11 @@ To start the web server, run the following command:
 ```sh
 yarn start:dev
 ```
+
+## How to log in to Telegram test Environment
+
+- **iOS:**  tap 10 times on the Settings icon > Accounts > Login to another account > Test.
+
+- **Telegram Desktop:**  open ☰ Settings > Shift + Alt + Right click ‘Add Account’ and select ‘Test Server’.
+
+- **macOS:**  click the Settings icon 10 times to open the Debug Menu, ⌘ + click ‘Add Account’ and log in via phone number.
