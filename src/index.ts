@@ -6,6 +6,7 @@ import './server';
 
 dotenv.config();
 
+// ENV
 const botToken = process.env.BOT_TOKEN!;
 const thePassTgBotUrl = process.env.THE_PASS_TG_BOT_URL!;
 
@@ -65,9 +66,6 @@ telegramBot.action('submit_proof', async (ctx) => {
   );
 
   return ctx.replyWithPhoto({ source: qrBuffer });
-
-  // TOAST
-  // return ctx.answerCbQuery('Option 1 selected!');
 });
 
 telegramBot.launch();
