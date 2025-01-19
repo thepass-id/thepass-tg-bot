@@ -8,7 +8,6 @@ dotenv.config();
 
 // ENV
 const startkentRpcNodeUrl = process.env.STARKNET_RPC_NODE_URL!;
-console.log('🚀 ~ startkentRpcNodeUrl:', startkentRpcNodeUrl);
 const accountAddress = process.env.ACCOUNT_ADDRESS!;
 const privateKey = process.env.ACCOUNT_PRIVATE_KEY!;
 
