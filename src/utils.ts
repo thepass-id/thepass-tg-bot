@@ -73,7 +73,7 @@ export const sendTransactionResultToTelegram = async (
           [
             {
               text: 'transaction',
-              url: `https://sepolia.starkscan.co/contract/${txHash}#events`,
+              url: `https://sepolia.starkscan.co/tx/${txHash}#events`,
             },
           ],
         ],
