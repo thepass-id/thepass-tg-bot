@@ -6,8 +6,9 @@ import './server';
 
 dotenv.config();
 
+// ENV
 const botToken = process.env.BOT_TOKEN!;
-const thePassAppUrl = process.env.THE_PASS_APP_URL!;
+const thePassTgBotUrl = process.env.THE_PASS_TG_BOT_URL!;
 
 export const telegramBot = new Telegraf(botToken, {
   telegram: { testEnv: true },
@@ -60,14 +61,11 @@ telegramBot.action('submit_proof', async (ctx) => {
   if (!chatId) throw new Error('Chat id not found');
 
   const qrBuffer = await QRCode.toBuffer(
-    `${thePassAppUrl}/submitproof/${chatId}`,
+    `${thePassTgBotUrl}/submitproof/${chatId}`,
     { width: 200 }
   );
 
   return ctx.replyWithPhoto({ source: qrBuffer });
-
-  // TOAST
-  // return ctx.answerCbQuery('Option 1 selected!');
 });
 
 telegramBot.launch();
